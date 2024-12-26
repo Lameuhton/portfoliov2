@@ -91,7 +91,7 @@ export function Navigation() {
               className="flex items-center gap-2 text-primary-600 dark:text-primary-400"
             >
               <Code2 className="w-8 h-8" />
-              <span>Portfolio</span>
+              <span>Auréliane G.</span>
             </motion.div>
           </Link>
 

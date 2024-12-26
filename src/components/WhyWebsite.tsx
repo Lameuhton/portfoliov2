@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
+import { BenefitCard } from "./BenefitCard";
 
 const benefits = [
   {
@@ -15,54 +16,53 @@ const benefits = [
     title: "Visibilité 24h/24",
     description:
       "Votre entreprise reste accessible à vos clients potentiels même en dehors des heures d'ouverture.",
-    explanation:
-      "C'est comme avoir une vitrine qui ne ferme jamais ! Vos clients peuvent découvrir vos services à tout moment.",
+    details:
+      "Un site web, c'est comme une vitrine qui ne ferme jamais ! Vos clients peuvent découvrir vos services et produits à toute heure, même pendant votre sommeil. C'est votre meilleur commercial qui travaille sans relâche.",
   },
   {
     icon: TrendingUp,
     title: "Crédibilité Professionnelle",
     description:
-      "Un site web moderne et professionnel renforce votre image de marque et la confiance de vos clients.",
-    explanation:
-      "Aujourd'hui, 81% des clients recherchent une entreprise en ligne avant tout achat. Sans site web, vous risquez de perdre leur confiance.",
+      "Un site web moderne renforce votre image de marque et la confiance de vos clients.",
+    details:
+      "Dans le monde d'aujourd'hui, 81% des clients recherchent une entreprise en ligne avant tout achat. Un site web professionnel est votre première impression auprès de vos futurs clients.",
   },
   {
     icon: Users,
-    title: "Touchez Plus de Clients",
+    title: "Plus de Clients",
     description:
-      "Élargissez votre portée au-delà de votre zone géographique et attirez de nouveaux clients.",
-    explanation:
-      "C'est comme avoir un commercial qui travaille pour vous 24h/24, touchant des clients que vous n'auriez jamais pu atteindre autrement.",
+      "Élargissez votre portée au-delà de votre zone géographique habituelle.",
+    details:
+      "Internet n'a pas de frontières ! Votre site web vous permet d'atteindre des clients que vous n'auriez jamais pu toucher autrement, où qu'ils soient.",
   },
   {
     icon: Clock,
     title: "Gain de Temps",
     description:
-      "Automatisez certaines tâches comme la prise de rendez-vous ou les réponses aux questions fréquentes.",
-    explanation:
-      "Imaginez : pendant que vous dormez, votre site web informe vos clients et prend même des réservations !",
+      "Automatisez vos tâches répétitives comme la prise de rendez-vous.",
+    details:
+      "Imaginez : pendant que vous travaillez, votre site répond aux questions fréquentes, prend les rendez-vous et même traite des commandes. C'est comme avoir un assistant 24h/24 !",
   },
   {
     icon: ShieldCheck,
     title: "Investissement Durable",
     description:
-      "Un site web est un investissement rentable qui continue de générer des résultats année après année.",
-    explanation:
-      "Contrairement à la publicité traditionnelle qui s'arrête dès que vous cessez de payer, votre site web continue de travailler pour vous.",
+      "Un site web continue de générer des résultats année après année.",
+    details:
+      "Contrairement à la publicité traditionnelle qui s'arrête dès que vous cessez de payer, votre site web continue de travailler pour vous. C'est un investissement qui s'enrichit avec le temps.",
   },
   {
     icon: Smartphone,
-    title: "Adaptabilité Totale",
-    description:
-      "Votre site s'adapte à tous les appareils : ordinateurs, tablettes et smartphones.",
-    explanation:
-      "Plus de 60% des recherches se font sur mobile. Votre site sera parfaitement lisible peu importe l'appareil utilisé.",
+    title: "Pour Tous les Écrans",
+    description: "Votre site s'adapte automatiquement à tous les appareils.",
+    details:
+      "Avec plus de 60% des recherches sur mobile, votre site sera parfait sur tous les écrans. Smartphone, tablette ou ordinateur : vos clients auront toujours une expérience optimale.",
   },
 ];
 
 export function WhyWebsite() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="py-20 bg-gradient-to-b from-white to-rose-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -76,7 +76,7 @@ export function WhyWebsite() {
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Dans le monde numérique d'aujourd'hui, avoir un site web n'est
-              plus un luxe, c'est une nécessité. Voici pourquoi :
+              plus un luxe, c'est une nécessité. Découvrez pourquoi :
             </p>
           </motion.div>
 
@@ -85,29 +85,8 @@ export function WhyWebsite() {
               <motion.div
                 key={benefit.title}
                 variants={fadeInVariants(index * 0.1)}
-                className="group p-6 rounded-xl bg-gradient-to-br from-rose-50 to-white dark:from-gray-800 dark:to-gray-900 hover:shadow-xl transition-all duration-300"
               >
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-900/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <benefit.icon className="w-6 h-6 text-rose-600 dark:text-rose-400" />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-xl font-display font-semibold mb-3">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-                <div className="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg mt-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                    <span className="font-semibold text-rose-600 dark:text-rose-400 block mb-1">
-                      Le saviez-vous ?
-                    </span>
-                    {benefit.explanation}
-                  </p>
-                </div>
+                <BenefitCard {...benefit} />
               </motion.div>
             ))}
           </div>

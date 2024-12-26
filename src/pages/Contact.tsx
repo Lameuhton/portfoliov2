@@ -45,7 +45,7 @@ export function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white dark:bg-gray-900" id="contact">
+      <section className="pt-20 pb-36 bg-white dark:bg-gray-900" id="contact">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

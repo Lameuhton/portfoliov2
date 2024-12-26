@@ -17,7 +17,7 @@ export function Hero() {
             className="mb-8"
           >
             <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200"
+              src="/photo.jpg"
               alt="Portrait"
               className="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg"
             />

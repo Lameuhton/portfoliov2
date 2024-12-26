@@ -100,7 +100,7 @@ export function Projects() {
       </section>
 
       {/* Filters Section */}
-      <section className="py-12 bg-white dark:bg-gray-900">
+      <section className="pt-12 pb-36 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"

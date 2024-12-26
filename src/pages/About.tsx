@@ -3,6 +3,7 @@ import { fadeInVariants } from "../lib/utils";
 import { Code2, Heart, Star, Coffee } from "lucide-react";
 import { InteractiveTimeline } from "../components/InteractiveTimeline";
 import { CVDownloadButton } from "../components/CVDownloadButton";
+import { ValuesSection } from "../components/values/ValuesSection";
 
 export function About() {
   return (
@@ -17,7 +18,7 @@ export function About() {
           >
             <motion.div variants={fadeInVariants()} className="mb-8">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200"
+                src="/photo.jpg"
                 alt="Auréliane Gagliardi"
                 className="w-40 h-40 rounded-full mx-auto shadow-xl"
               />
@@ -114,56 +115,7 @@ export function About() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.h2
-              variants={fadeInVariants()}
-              className="text-3xl font-display font-bold mb-12 text-center"
-            >
-              Mes Valeurs
-            </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Qualité",
-                  description:
-                    "Je m'engage à livrer un code propre et des solutions performantes.",
-                },
-                {
-                  title: "Innovation",
-                  description:
-                    "Je reste à la pointe des nouvelles technologies et tendances.",
-                },
-                {
-                  title: "Communication",
-                  description:
-                    "Je maintiens un dialogue transparent tout au long du projet.",
-                },
-              ].map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  variants={fadeInVariants(index * 0.1)}
-                  className="text-center"
-                >
-                  <h3 className="text-xl font-semibold mb-4 text-rose-700 dark:text-rose-400">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {value.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <ValuesSection />
     </>
   );
 }

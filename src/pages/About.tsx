@@ -33,8 +33,10 @@ export function About() {
               variants={fadeInVariants(0.2)}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              Développeuse web passionnée, je crée des expériences numériques
-              uniques qui allient esthétique et performance.
+              Passionnée, je crée des expériences numériques
+              uniques qui allient esthétique et performance. Je recherche
+              actuellement un poste de développeuse web, notamment en front-end,
+              pour contribuer à des projets innovants.
             </motion.p>
             <motion.div variants={fadeInVariants(0.3)}>
               <CVDownloadButton />

@@ -10,49 +10,40 @@ import {
 
 const timeline = [
   {
-    year: "2019",
+    year: "2018 à 2023",
     icon: BookOpen,
-    title: "Début de l'Aventure",
-    description: "Première ligne de code et découverte de la programmation",
+    title: "Découverte et études",
+    description: "HEPL et HELMo",
     details:
-      "C'est ici que tout a commencé ! Ma première rencontre avec HTML et CSS a été une révélation.",
-    tech: ["HTML", "CSS"],
+      "C'est ici que tout a commencé ! J'ai étudié l'informatique de gestion à la HEPL et la cybersécurité à HELMo, où j'ai acquis des bases solides dans divers langages et domaines. Cependant, la méthode traditionnelle d'apprentissage ne me convenait pas, me poussant à explorer des approches plus adaptées à ma façon d'apprendre.",
+    tech: ["HTML", "CSS", "Javascript", "PHP", "Python", "SQL"],
   },
   {
-    year: "2020",
+    year: "2024",
     icon: Code2,
-    title: "Immersion JavaScript",
-    description: "Apprentissage intensif du développement web moderne",
+    title: "Formation Web Developper",
+    description: "Becode.org",
     details:
-      "Plongée dans l'univers de JavaScript et découverte des frameworks modernes.",
-    tech: ["JavaScript", "React", "Node.js"],
+      "Après ces études, j'ai découvert un bootcamp intensif de 7 mois chez Becode.org, une formation parfaitement alignée avec ma manière d'apprendre. En travaillant sur des projets concrets, seule ou en équipe, j'ai pu maîtriser rapidement des frameworks modernes comme React ou Laravel. Ce format m'a surtout permis de développer une réelle autonomie dans l'apprentissage, une compétence clé pour évoluer constamment dans le domaine du développement web.",
+    tech: ["React", "Laravel", "Node.js", "Git", "SCSS"],
   },
   {
-    year: "2021",
+    year: "2024",
     icon: Laptop,
     title: "Premiers Projets",
-    description: "Création de projets personnels et collaboratifs",
+    description: "Création de projets personnels",
     details:
-      "Développement de plusieurs applications web complètes, de la conception au déploiement.",
+      "Grâce à ces nouvelles compétences acquises pendant ma formation, j'ai commencé à réaliser des projets personnels en parallèle pour m'entraîner. J'ai conçu des portfolios pour moi et pour des connaissances, ainsi que des sites vitrine et e-commerce pour mon entourage, ce qui m'a permis de consolider mes connaissances tout en répondant à des besoins concrets.",
     tech: ["TypeScript", "Next.js", "Tailwind CSS"],
   },
   {
-    year: "2022",
-    icon: GraduationCap,
-    title: "Formation Avancée",
-    description: "Spécialisation en développement full-stack",
-    details:
-      "Approfondissement des connaissances en architecture logicielle et bonnes pratiques.",
-    tech: ["MongoDB", "PostgreSQL", "Docker"],
-  },
-  {
-    year: "2023",
+    year: "2024",
     icon: Briefcase,
-    title: "Freelance",
-    description: "Lancement en tant que développeuse indépendante",
+    title: "Stage en Développement Web",
+    description: "Webecode, agence web éco-responsable",
     details:
-      "Début de l'aventure entrepreneuriale et premiers projets clients.",
-    tech: ["AWS", "CI/CD", "Testing"],
+      "À la fin de ma formation, j'ai effectué un stage de 3 mois au sein de l'agence web éco-responsable Webecode. Cette première expérience professionnelle très enrichissante m'a permis d'apprendre à créer des thèmes personnalisés WordPress tout en découvrant les principes de l'éco-conception. J'ai également contribué à la réalisation de maquettes, une activité que j'ai particulièrement appréciée pour son côté créatif et collaboratif.",
+    tech: ["Wordpress", "Tailwind CSS"],
   },
 ];
 
@@ -120,7 +111,7 @@ export function InteractiveTimeline() {
                       <p className="text-gray-600 dark:text-gray-300 mb-4">
                         {item.description}
                       </p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 italic mb-4">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                         {item.details}
                       </p>
                       <div className="flex flex-wrap gap-2">

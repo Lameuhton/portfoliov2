@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { fadeInVariants } from '../lib/utils';
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from 'react-router-dom';
+import { TypingText } from "./hero/TypingText";
 
 export function Hero() {
   return (
@@ -20,11 +21,14 @@ export function Hero() {
             />
           </motion.div>
 
-          <motion.h1
-            variants={fadeInVariants()}
-            className="font-display text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300 text-transparent bg-clip-text"
-          >
-            Développeuse Web Créative
+          <motion.h1 variants={fadeInVariants()} className="mb-6">
+            <motion.p className="text-5xl text-gray-600 dark:text-gray-300 mb-2 font-display">
+              Bonjour, je suis
+            </motion.p>
+            <TypingText
+              texts={["Auréliane Gagliardi", "Développeuse Web"]}
+              className="font-display text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300 text-transparent bg-clip-text"
+            />
           </motion.h1>
 
           <motion.p
@@ -70,7 +74,11 @@ export function Hero() {
                 href: "https://www.linkedin.com/in/aurelianeg-webdev/",
                 label: "LinkedIn",
               },
-              { name: "Email", icon: Mail, href: "mailto:aurelianeg2000@gmail.com" },
+              {
+                name: "Email",
+                icon: Mail,
+                href: "mailto:aurelianeg2000@gmail.com",
+              },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

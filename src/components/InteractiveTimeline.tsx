@@ -68,7 +68,7 @@ export function InteractiveTimeline() {
         >
           <motion.h2
             variants={fadeInVariants()}
-            className="text-3xl font-display font-bold text-center mb-16"
+            className="text-4xl font-display font-bold text-center mb-16"
           >
             Mon Parcours
           </motion.h2>

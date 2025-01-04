@@ -28,7 +28,7 @@ export function ValuesSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-display font-bold mb-4">
+            <h2 className="text-4xl font-display font-bold mb-4">
               Mes Valeurs
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">

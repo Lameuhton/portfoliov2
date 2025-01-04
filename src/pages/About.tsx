@@ -25,7 +25,7 @@ export function About() {
             </motion.div>
             <motion.h1
               variants={fadeInVariants(0.1)}
-              className="text-4xl md:text-5xl font-display font-bold mb-6"
+              className="text-5xl font-display font-bold mb-6"
             >
               À propos de moi
             </motion.h1>
@@ -56,7 +56,7 @@ export function About() {
           >
             <motion.h2
               variants={fadeInVariants()}
-              className="text-3xl font-display font-bold mb-12 text-center"
+              className="text-4xl font-display font-bold mb-12 text-center"
             >
               Mes Compétences
             </motion.h2>

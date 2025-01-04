@@ -69,19 +69,13 @@ export function Contact() {
                     {
                       icon: Mail,
                       label: "Email",
-                      value: "contact@example.com",
-                      href: "mailto:contact@example.com",
-                    },
-                    {
-                      icon: Phone,
-                      label: "Téléphone",
-                      value: "+33 6 12 34 56 78",
-                      href: "tel:+33612345678",
+                      value: "aurelianeg2000@gmail.com",
+                      href: "mailto:aurelianeg2000@gmail.com",
                     },
                     {
                       icon: MapPin,
                       label: "Localisation",
-                      value: "Paris, France",
+                      value: "Liège, Belgique",
                     },
                   ].map(({ icon: Icon, label, value, href }) => (
                     <div key={label} className="flex items-center gap-4">

@@ -3,27 +3,31 @@ import { Github, Linkedin, Mail, FileText, Heart } from 'lucide-react';
 
 const navigation = {
   main: [
-    { name: 'Accueil', href: '/' },
-    { name: 'À propos', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Projets', href: '/projects' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Accueil", href: "/" },
+    { name: "À propos", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Projets", href: "/projects" },
+    { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: 'Développement Web', href: '/services' },
-    { name: 'Design UI/UX', href: '/services' },
-    { name: 'Applications Mobiles', href: '/services' },
-    { name: 'Maintenance', href: '/services' },
+    { name: "Développement Web", href: "/services" },
+    { name: "Design UI/UX", href: "/services" },
+    { name: "Applications Mobiles", href: "/services" },
+    { name: "Maintenance", href: "/services" },
   ],
   legal: [
-    { name: 'Mentions légales', href: '/legal' },
-    { name: 'Politique de confidentialité', href: '/privacy' },
+    { name: "Mentions légales", href: "/legal" },
+    { name: "Politique de confidentialité", href: "/privacy" },
   ],
   social: [
-    { name: 'GitHub', icon: Github, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Email', icon: Mail, href: 'mailto:contact@example.com' },
-    { name: 'CV', icon: FileText, href: '/cv.pdf', download: true },
+    { name: "GitHub", icon: Github, href: "https://github.com/Lameuhton" },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/aurelianeg-webdev/",
+    },
+    { name: "Email", icon: Mail, href: "aurelianeg2000@gmail.com" },
+    { name: "CV", icon: FileText, href: "/CV.pdf", download: true },
   ],
 };
 

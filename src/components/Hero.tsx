@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { fadeInVariants } from '../lib/utils';
-import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export function Hero() {
@@ -12,10 +12,7 @@ export function Hero() {
           animate="visible"
           className="max-w-3xl mx-auto text-center"
         >
-          <motion.div
-            variants={fadeInVariants()}
-            className="mb-8"
-          >
+          <motion.div variants={fadeInVariants()} className="mb-8">
             <img
               src="/photo.jpg"
               alt="Portrait"
@@ -29,13 +26,14 @@ export function Hero() {
           >
             Développeuse Web Créative
           </motion.h1>
-          
+
           <motion.p
             variants={fadeInVariants(0.2)}
             className="text-xl text-gray-600 dark:text-gray-300 mb-8 font-light"
           >
             Passionnée par la création d'expériences web uniques et élégantes.
-            Je transforme vos idées en réalités numériques avec une touche d'originalité.
+            Je transforme vos idées en réalités numériques avec une touche
+            d'originalité.
           </motion.p>
 
           <motion.div
@@ -62,9 +60,17 @@ export function Hero() {
             className="flex justify-center gap-6"
           >
             {[
-              { icon: Github, href: '#', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Twitter, href: '#', label: 'Twitter' },
+              {
+                icon: Github,
+                href: "https://github.com/Lameuhton",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/aurelianeg-webdev/",
+                label: "LinkedIn",
+              },
+              { name: "Email", icon: Mail, href: "mailto:aurelianeg2000@gmail.com" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

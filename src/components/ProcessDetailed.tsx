@@ -5,48 +5,60 @@ import { MessageSquare, PenTool, Code2, Rocket, ArrowRight } from 'lucide-react'
 const steps = [
   {
     icon: MessageSquare,
-    title: 'Consultation Gratuite',
-    description: 'Discutons de votre projet, vos objectifs et vos besoins spécifiques. Je vous conseille sur les meilleures solutions.',
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+    title: "Consultation Gratuite",
+    description:
+      "Discutons de votre projet, vos objectifs et vos besoins spécifiques. Je vous conseille sur les meilleures solutions.",
     details: [
-      'Analyse de vos besoins',
-      'Définition des objectifs',
-      'Conseils stratégiques',
-      'Estimation budgétaire'
-    ]
+      "Analyse de vos besoins",
+      "Définition des objectifs",
+      "Conseils stratégiques",
+      "Estimation budgétaire",
+    ],
   },
   {
     icon: PenTool,
-    title: 'Design & Planification',
-    description: 'Création de maquettes et définition de la structure de votre site pour une expérience utilisateur optimale.',
+    image:
+      "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800",
+    title: "Design & Planification",
+    description:
+      "Création de maquettes et définition de la structure de votre site pour une expérience utilisateur optimale.",
     details: [
-      'Maquettes personnalisées',
-      'Choix des fonctionnalités',
-      'Architecture du site',
-      'Planning détaillé'
-    ]
+      "Maquettes personnalisées",
+      "Choix des fonctionnalités",
+      "Architecture du site",
+      "Planning détaillé",
+    ],
   },
   {
     icon: Code2,
-    title: 'Développement',
-    description: 'Développement de votre site avec les meilleures technologies, en respectant les standards du web.',
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800",
+    title: "Développement",
+    description:
+      "Développement de votre site avec les meilleures technologies, en respectant les standards du web.",
     details: [
-      'Code sur mesure',
-      'Responsive design',
-      'Optimisation SEO',
-      'Tests approfondis'
-    ]
+      "Code sur mesure",
+      "Responsive design",
+      "Optimisation SEO",
+      "Tests approfondis",
+    ],
   },
   {
     icon: Rocket,
-    title: 'Lancement & Suivi',
-    description: 'Mise en ligne de votre site et accompagnement pour assurer son succès à long terme.',
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    title: "Lancement & Suivi",
+    description:
+      "Mise en ligne de votre site et accompagnement pour assurer son succès à long terme.",
     details: [
-      'Déploiement sécurisé',
-      'Formation utilisation',
-      'Support technique',
-      'Maintenance évolutive'
-    ]
-  }
+      "Déploiement sécurisé",
+      "Formation utilisation",
+      "Support technique",
+      "Maintenance évolutive",
+    ],
+  },
 ];
 
 export function ProcessDetailed() {
@@ -64,8 +76,8 @@ export function ProcessDetailed() {
               Un Processus Clair et Efficace
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              De la première discussion à la mise en ligne, je vous accompagne à chaque étape 
-              pour créer un site web qui dépasse vos attentes.
+              De la première discussion à la mise en ligne, je vous accompagne à
+              chaque étape pour créer un site web qui dépasse vos attentes.
             </p>
           </motion.div>
 
@@ -92,14 +104,16 @@ export function ProcessDetailed() {
                     {step.details.map((detail) => (
                       <li key={detail} className="flex items-center gap-2">
                         <ArrowRight className="w-4 h-4 text-primary-500 dark:text-primary-400" />
-                        <span className="text-gray-600 dark:text-gray-300">{detail}</span>
+                        <span className="text-gray-600 dark:text-gray-300">
+                          {detail}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="w-full md:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
                   <div className="aspect-video bg-primary-50 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                    <step.icon className="w-16 h-16 text-primary-300 dark:text-primary-600" />
+                    <img src={step.image} className="rounded-lg" />
                   </div>
                 </div>
               </motion.div>

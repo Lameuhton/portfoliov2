@@ -67,27 +67,27 @@ export function About() {
                 {
                   icon: Code2,
                   title: "Technologies Frontend",
-                  skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
+                  skills: ["React", "TypeScript","Next.js", "Tailwind CSS", "SCSS", "Wordpress",],
                 },
                 {
                   icon: Star,
                   title: "Technologies Backend",
-                  skills: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+                  skills: ["Node.js", "Express", "MongoDB", "PostgreSQL",],
                 },
                 {
                   icon: Heart,
                   title: "Design",
                   skills: [
-                    "UI/UX Design",
-                    "Figma",
-                    "Adobe XD",
+                    "Maquettes (Figma)",
                     "Responsive Design",
+                    "Illustrator",
+
                   ],
                 },
                 {
                   icon: Coffee,
                   title: "Outils & Méthodes",
-                  skills: ["Git", "Agile", "CI/CD", "Testing"],
+                  skills: ["Git", "Agile", "SEO", "Accessibilité"],
                 },
               ].map((category, index) => (
                 <motion.div

@@ -15,7 +15,6 @@ export function Home() {
       <WhyWebsite />
       <WhyChooseMe />
       <Process />
-      <PricingPlans />
       <ProjectShowcase />
       <FAQ />
       <CallToAction />

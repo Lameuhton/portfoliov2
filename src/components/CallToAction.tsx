@@ -26,7 +26,7 @@ export function CallToAction() {
             variants={fadeInVariants(0.2)}
             className="text-lg text-gray-600 dark:text-gray-300 mb-8"
           >
-            Que vous ayez besoin d'un nouveau site web, d'une refonte complète ou d'une application sur mesure,
+            Que vous ayez besoin d'un nouveau site web sur mesure ou même d'une refonte complète,
             je suis là pour transformer votre vision en réalité.
           </motion.p>
           <motion.div

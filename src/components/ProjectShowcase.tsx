@@ -5,21 +5,23 @@ import { Link } from 'react-router-dom';
 
 const featuredProjects = [
   {
-    title: 'E-commerce Platform',
-    description: 'Une plateforme e-commerce moderne avec une expérience utilisateur optimisée.',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    github: '#',
-    demo: '#'
+    title: "Site du Dr. François Bernaerts",
+    description:
+      "Réalisé lors de mon stage chez Webecode, ce site vitrine présente les services du Dr. François Bernaerts, médecin généraliste homéopathe.",
+    image: "/images/projet-docteur.png",
+    tech: ["Wordpress", "Tailwind"],
+    github: null, // Pas de code disponible
+    demo: "https://www.docteur.webecode.be/",
   },
   {
-    title: 'Dashboard Analytics',
-    description: 'Interface d\'analyse de données en temps réel avec visualisations interactives.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-    tech: ['Vue.js', 'D3.js', 'Firebase'],
-    github: '#',
-    demo: '#'
-  }
+    title: "Portfolio",
+    description:
+      "Ce portfolio est un site moderne et responsive conçu pour présenter des compétences professionnelles avec un design élégant et des animations subtiles.",
+    image: "/images/projet-portfoliocolin.png",
+    tech: ["NextJS", "Tailwind"],
+    github: "https://github.com/Lameuhton/atome_portfolio",
+    demo: "https://www.gregoire.dev/",
+  },
 ];
 
 export function ProjectShowcase() {
@@ -37,8 +39,8 @@ export function ProjectShowcase() {
               Projets Récents
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Découvrez quelques-unes de mes réalisations récentes et voyez comment
-              je peux donner vie à vos idées.
+              Découvrez quelques-unes de mes réalisations récentes et voyez
+              comment je peux donner vie à vos idées.
             </p>
           </motion.div>
 
@@ -64,7 +66,7 @@ export function ProjectShowcase() {
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map(tech => (
+                    {project.tech.map((tech) => (
                       <span
                         key={tech}
                         className="px-3 py-1 text-sm bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 rounded-full"
@@ -74,34 +76,35 @@ export function ProjectShowcase() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Demo
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400"
+                      >
+                        <Github className="w-4 h-4" />
+                        Code
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.article>
             ))}
           </div>
 
-          <motion.div
-            variants={fadeInVariants(0.2)}
-            className="text-center"
-          >
+          <motion.div variants={fadeInVariants(0.2)} className="text-center">
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 px-8 py-3 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors shadow-md hover:shadow-lg"

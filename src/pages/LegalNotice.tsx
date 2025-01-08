@@ -65,12 +65,13 @@ export function LegalNotice() {
               <p className="text-gray-600 dark:text-gray-300 mb-8">
                 Tous les contenus présents sur ce site (textes, images,
                 graphismes) sont la propriété de Auréliane Gagliardi, sauf
-                mention contraire. Les icônes utilisées sur ce site proviennent
-                de la bibliothèque Lucide React et sont utilisées conformément à
-                leur licence. Toute reproduction ou utilisation du contenu de ce
-                site sans autorisation préalable est interdite. Pour les icônes,
-                veuillez vous référer aux conditions d’utilisation de la
-                bibliothèque Lucide React.
+                mention contraire. Certaines images utilisées sur ce site
+                proviennent de la plateforme Unsplash et sont utilisées
+                conformément à leur licence libre. Les icônes utilisées sur ce
+                site proviennent de la bibliothèque Lucide React et sont
+                utilisées conformément à leur licence. Toute reproduction ou
+                utilisation du contenu de ce site sans autorisation préalable
+                est interdite.
               </p>
 
               <h2 className="text-2xl font-display font-semibold mb-6">

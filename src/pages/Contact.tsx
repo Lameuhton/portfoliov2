@@ -31,14 +31,15 @@ export function Contact() {
               variants={fadeInVariants()}
               className="text-4xl md:text-5xl font-display font-bold mb-6"
             >
-              Parlons de votre projet
+              Contactez-moi
             </motion.h1>
             <motion.p
               variants={fadeInVariants(0.2)}
               className="text-xl text-gray-600 dark:text-gray-300"
             >
-              Je suis à votre écoute pour donner vie à vos idées et créer
-              ensemble une solution web qui vous ressemble.
+              Que ce soit pour un projet web ou pour discuter d'une opportunité
+              professionnelle, je suis toujours à la recherche de nouveaux
+              défis.
             </motion.p>
           </motion.div>
         </div>
@@ -59,9 +60,9 @@ export function Contact() {
                   Informations de contact
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-8">
-                  N'hésitez pas à me contacter pour toute question ou pour
-                  discuter de votre projet. Je vous répondrai dans les plus
-                  brefs délais.
+                  Vous pouvez me contacter via ce formulaire ou par email pour
+                  toute question ou collaboration. Je m'engage à vous répondre
+                  rapidement !
                 </p>
 
                 <div className="space-y-6">
@@ -155,7 +156,7 @@ export function Contact() {
                     name="message"
                     rows={6}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-rose-500 outline-none transition-shadow resize-none"
-                    placeholder="Décrivez votre projet..."
+                    placeholder="Votre message..."
                   ></textarea>
                 </div>
 

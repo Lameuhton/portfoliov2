@@ -5,34 +5,68 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Site du Dr. François Bernaerts",
     description:
-      "Une plateforme e-commerce complète avec panier, paiement et gestion des commandes.",
-    image:
-      "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800",
-    tech: ["React", "Node.js", "MongoDB"],
+      "Réalisé lors de mon stage chez Webecode, ce site vitrine présente les services du Dr. François Bernaerts, médecin généraliste homéopathe.",
+    image: "/images/projet-docteur.png",
+    tech: ["Wordpress", "Tailwind"],
     github: null, // Pas de code disponible
-    demo: "https://demo-ecommerce.com",
+    demo: "https://www.docteur.webecode.be/",
   },
   {
-    title: "Dashboard Analytics",
+    title: "Site de la Sandwicherie Deliziosa",
     description:
-      "Tableau de bord analytique avec visualisation de données en temps réel.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    tech: ["Vue.js", "D3.js", "Firebase"],
-    github: "https://github.com/user/dashboard",
-    demo: "https://demo-dashboard.com",
+      "Projet réalisé entièrement par moi-même pour une connaissance, ce site vitrine présente de manière attrayante les services et produits de la sandwicherie.",
+    image: "/images/projet-sandwicherie.png",
+    tech: ["NextJS", "Tailwind"],
+    github: null,
+    demo: null,
   },
   {
-    title: "Social Media App",
+    title: "Portfolio",
     description:
-      "Application de réseau social avec messagerie instantanée et partage de médias.",
-    image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800",
-    tech: ["React Native", "GraphQL", "AWS"],
-    github: "https://github.com/user/social",
-    demo: null, // Pas de démo disponible
+      "Ce portfolio est un site moderne et responsive conçu pour présenter des compétences professionnelles avec un design élégant et des animations subtiles.",
+    image: "/images/projet-portfoliocolin.png",
+    tech: ["NextJS", "Tailwind"],
+    github: "https://github.com/Lameuhton/atome_portfolio",
+    demo: "https://www.gregoire.dev/",
+  },
+  {
+    title: "Craftify - Site eCommerce",
+    description:
+      "Projet de groupe visant à créer une plateforme où les artisans peuvent exposer et vendre leurs créations faites main.",
+    image: "/images/craftify-home.png",
+    tech: ["React", "Tailwind", "Express"],
+    github: "https://github.com/YasmineSan/The_Project",
+    demo: "https://ecommerce-craftify.netlify.app/", // Pas de démo disponible
+  },
+  {
+    title: "Landing page site immobilier",
+    description:
+      "Repris d'un design template, ce projet a été réalisé pour m'entraîner et affiner mes compétences.",
+    image: "/images/projet-panto.png",
+    tech: ["React", "NextJS", "Tailwind"],
+    github: "https://github.com/Lameuhton/PantoProject",
+    demo: "https://panto-project.vercel.app/", // Pas de démo disponible
+  },
+  {
+    title: "Catalogue de jeux",
+    description:
+      "Site web regroupant tous les jeux vidéo populaires, permettant aux utilisateurs de parcourir, trier et rechercher des titres par genre, plateforme et autres critères via une barre de recherche.",
+    image: "/images/projet-bestgamez.png",
+    tech: ["React", "SCSS"],
+    github:
+      "https://github.com/Junior-dev-Track/16-react-everyonegames-christophe-aureliane",
+    demo: "https://bestgamez.netlify.app/", // Pas de démo disponible
+  },
+  {
+    title: "Application Todolist",
+    description:
+      "Application interactive de gestion de tâches permettant de visualiser, ajouter, modifier et supprimer des tâches, tout en conservant celles-ci après la fermeture de l'application.",
+    image: "/images/projet-todoapp.png",
+    tech: ["React"],
+    github: "https://github.com/Lameuhton/todoapp",
+    demo: "https://aurelianegtodolist.netlify.app/", // Pas de démo disponible
   },
 ];
 
@@ -57,9 +91,9 @@ export function Projects() {
   };
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <section className="pt-36 pb-20 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -76,15 +110,15 @@ export function Projects() {
               variants={fadeInVariants(0.2)}
               className="text-xl text-gray-600 dark:text-gray-300"
             >
-              Découvrez une sélection de projets qui illustrent mon expertise et
-              ma passion pour le développement web.
+              Un aperçu des projets que j'ai réalisés pour mettre en
+              pratique mes compétences en développement web.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Filters Section */}
-      <section className="py-12 bg-white dark:bg-gray-900">
+      <section className="pt-20 pb-36 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"

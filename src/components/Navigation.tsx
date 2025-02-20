@@ -17,7 +17,6 @@ import { cn } from "../lib/utils";
 const links = [
   { to: "/", label: "Accueil", icon: Home },
   { to: "/about", label: "À propos", icon: User },
-  { to: "/services", label: "Services", icon: Settings },
   { to: "/projects", label: "Projets", icon: Code2 },
   { to: "/contact", label: "Contact", icon: Mail },
 ];

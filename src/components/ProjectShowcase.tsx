@@ -39,8 +39,7 @@ export function ProjectShowcase() {
               Projets Récents
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Découvrez quelques-unes de mes réalisations récentes et voyez
-              comment je peux donner vie à vos idées.
+              Découvrez quelques-unes de mes réalisations récentes.
             </p>
           </motion.div>
 

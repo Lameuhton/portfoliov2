@@ -26,7 +26,7 @@ export function Hero() {
               Bonjour, je suis
             </motion.p>
             <TypingText
-              texts={["Auréliane Gagliardi", "Développeuse Web"]}
+              texts={["Auréliane Gagliardi", "Développeuse Web Junior"]}
               className="font-display text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300 text-transparent bg-clip-text"
             />
           </motion.h1>
@@ -45,18 +45,19 @@ export function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             <Link
-              to="/contact"
+              to="/about"
               className="inline-flex items-center gap-2 px-8 py-3 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors shadow-md hover:shadow-lg"
             >
-              Me contacter
+              À propos de moi
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              to="/projects"
+            <a
+              href="/CV.pdf"
+              download
               className="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary-200 dark:border-primary-800 rounded-full hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
             >
-              Voir mes projets
-            </Link>
+              Télécharger mon CV
+            </a>
           </motion.div>
 
           <motion.div

@@ -1,24 +1,24 @@
-import { Heart, Lightbulb, MessageSquare } from "lucide-react";
+import { Brush, Lightbulb, MessageSquare } from "lucide-react";
 import { ValueCard } from "./ValueCard";
 
 const values = [
   {
-    icon: Heart,
-    title: "Passion & Qualité",
+    icon: Lightbulb,
+    title: "Adaptabilité & Apprentissage",
     description:
-      "Chaque projet est une nouvelle aventure que j'aborde avec enthousiasme et rigueur pour créer des solutions exceptionnelles.",
+      "Je m’adapte rapidement aux nouvelles technologies et aux défis rencontrés. Autodidacte et curieuse, j’apprends en continu pour améliorer mes compétences et optimiser mon travail.",
   },
   {
-    icon: Lightbulb,
+    icon: Brush,
     title: "Innovation & Créativité",
     description:
-      "Je reste à l'affût des dernières technologies pour proposer des solutions modernes et innovantes.",
+      "Je reste à l'affût des dernières tendances et technologies pour créer des projets uniques et performants.",
   },
   {
     icon: MessageSquare,
-    title: "Communication & Transparence",
+    title: "Communication & Esprit d'équipe",
     description:
-      "Une communication claire et régulière est la clé d'une collaboration réussie et d'un projet abouti.",
+      "Travailler en équipe est essentiel pour mener un projet à bien. J’apprécie échanger des idées, apprendre des autres et contribuer efficacement à un environnement collaboratif.",
   },
 ];
 
@@ -32,7 +32,7 @@ export function ValuesSection() {
               Mes Valeurs
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              Les principes qui guident mon travail au quotidien
+              Les principes qui guident mon travail au quotidien.
             </p>
           </div>
 

@@ -20,14 +20,14 @@ export function CallToAction() {
             variants={fadeInVariants(0.1)}
             className="text-3xl md:text-4xl font-display font-bold mb-6"
           >
-            Prête à donner vie à votre projet web ?
+            Besoin d’une développeuse web créative et efficace ?
           </motion.h2>
           <motion.p
             variants={fadeInVariants(0.2)}
             className="text-lg text-gray-600 dark:text-gray-300 mb-8"
           >
-            Que vous ayez besoin d'un nouveau site web sur mesure ou même d'une refonte complète,
-            je suis là pour transformer votre vision en réalité.
+            Disponible pour une nouvelle opportunité, je suis prête à mettre mes
+            compétences en développement web au service de votre équipe.
           </motion.p>
           <motion.div
             variants={fadeInVariants(0.3)}
@@ -37,7 +37,7 @@ export function CallToAction() {
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors shadow-md hover:shadow-lg"
             >
-              Démarrer votre projet
+              Contactez-moi
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

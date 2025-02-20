@@ -4,10 +4,15 @@ import { Code2, Heart, Star, Coffee } from "lucide-react";
 import { InteractiveTimeline } from "../components/InteractiveTimeline";
 import { CVDownloadButton } from "../components/CVDownloadButton";
 import { ValuesSection } from "../components/values/ValuesSection";
+import { SEOHead } from "../components/SEOHead";
 
 export function About() {
   return (
     <>
+      <SEOHead
+        title="À propos"
+        description="Développeuse web passionnée, je crée des sites modernes et optimisés. Découvrez mon parcours et mes compétences."
+      />
       {/* Hero Section */}
       <section className="py-36 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
@@ -33,10 +38,10 @@ export function About() {
               variants={fadeInVariants(0.2)}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              Passionnée, je crée des expériences numériques
-              uniques qui allient esthétique et performance. Je recherche
-              actuellement un poste de développeuse web, notamment en front-end,
-              pour contribuer à des projets innovants.
+              Passionnée, je crée des expériences numériques uniques qui allient
+              esthétique et performance. Je recherche actuellement un poste de
+              développeuse web, notamment en front-end, pour contribuer à des
+              projets innovants.
             </motion.p>
             <motion.div variants={fadeInVariants(0.3)}>
               <CVDownloadButton />
@@ -67,12 +72,18 @@ export function About() {
                 {
                   icon: Code2,
                   title: "Technologies Frontend",
-                  skills: ["React", "TypeScript","Next.js", "Tailwind CSS", "SCSS", "Wordpress",],
+                  skills: [
+                    "React",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "SCSS",
+                    "Wordpress",
+                  ],
                 },
                 {
                   icon: Star,
                   title: "Technologies Backend",
-                  skills: ["Node.js", "Express", "MongoDB", "PostgreSQL",],
+                  skills: ["Node.js", "Laravel", "SQL", "Python"],
                 },
                 {
                   icon: Heart,
@@ -81,13 +92,12 @@ export function About() {
                     "Maquettes (Figma)",
                     "Responsive Design",
                     "Illustrator",
-
                   ],
                 },
                 {
                   icon: Coffee,
                   title: "Outils & Méthodes",
-                  skills: ["Git", "Agile", "SEO", "Accessibilité"],
+                  skills: ["Git", "SEO", "Accessibilité"],
                 },
               ].map((category, index) => (
                 <motion.div

@@ -17,7 +17,7 @@ export function Contact() {
     <>
       <SEOHead
         title="Contact"
-        description="Contactez Auréliane Gagliardi pour discuter de votre projet web et obtenir un devis personnalisé."
+        description="Développeuse web en recherche d'opportunités, contactez-moi pour en savoir plus sur mon profil et mes compétences."
       />
       {/* Hero Section */}
       <section className="pt-36 pb-20 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -61,7 +61,7 @@ export function Contact() {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-8">
                   Vous pouvez me contacter via ce formulaire ou par email pour
-                  toute question ou collaboration. Je m'engage à vous répondre
+                  toute proposition ou collaboration. Je m'engage à vous répondre
                   rapidement !
                 </p>
 

@@ -1,38 +1,44 @@
 import { motion } from 'framer-motion';
 import { fadeInVariants } from '../lib/utils';
-import { Heart, Lightbulb, Shield, Clock, Sparkles, MessageSquare } from 'lucide-react';
+import { Book, Code2, Users, Brain, Heart, Coffee } from "lucide-react";
 
 const benefits = [
   {
+    icon: Code2,
+    title: "Compétences Techniques",
+    description:
+      "Maîtrise des technologies web modernes comme React, Next.js ou Laravel. Toujours à jour avec les dernières pratiques.",
+  },
+  {
+    icon: Brain,
+    title: "Capacité d'Apprentissage",
+    description:
+      "Grande capacité d'adaptation et d'apprentissage rapide. Passionnée par les nouvelles technologies et méthodologies.",
+  },
+  {
+    icon: Users,
+    title: "Esprit d'Équipe",
+    description:
+      "Excellentes capacités de communication et de collaboration. Habituée au travail d'équipe.",
+  },
+  {
+    icon: Book,
+    title: "Formation Solide",
+    description:
+      "Formation en développement web avec des projets pratiques. Bases solides en algorithmique et bonnes pratiques.",
+  },
+  {
     icon: Heart,
-    title: 'Design Sur Mesure',
-    description: 'Chaque projet est unique. Je crée des designs personnalisés qui reflètent parfaitement votre identité et vos valeurs.'
+    title: "Passion du Code",
+    description:
+      "Véritable passion pour le développement et l'innovation. Toujours motivée pour apprendre et progresser.",
   },
   {
-    icon: Shield,
-    title: 'Qualité Premium',
-    description: 'Utilisation des dernières technologies pour garantir performance, sécurité et évolutivité de votre site.'
+    icon: Coffee,
+    title: "Projets Personnels",
+    description:
+      "Développement régulier de projets personnels pour approfondir mes connaissances et explorer de nouvelles technologies.",
   },
-  {
-    icon: Clock,
-    title: 'Délais Respectés',
-    description: 'Je m\'engage à livrer votre projet dans les temps, avec une communication transparente tout au long du processus.'
-  },
-  {
-    icon: Lightbulb,
-    title: 'Conseils Experts',
-    description: 'Bénéficiez de mon expertise pour faire les meilleurs choix techniques et stratégiques pour votre projet.'
-  },
-  {
-    icon: Sparkles,
-    title: 'Résultats Garantis',
-    description: 'Votre satisfaction est ma priorité. Je travaille jusqu\'à ce que vous soyez pleinement satisfait du résultat.'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Support Réactif',
-    description: 'Un accompagnement personnalisé et un support technique réactif pour répondre à tous vos besoins.'
-  }
 ];
 
 export function WhyChooseMe() {

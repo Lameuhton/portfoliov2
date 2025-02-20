@@ -60,10 +60,7 @@ export function PrivacyPolicy() {
                 3. Conservation des données
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                Les données collectées via le formulaire de contact sont
-                conservées pendant une durée maximale de 12 mois, sauf si une
-                relation professionnelle ou contractuelle est établie
-                nécessitant une conservation plus longue.
+                Les données collectées via le formulaire de contact ne sont pas conservées. Elles sont utilisées uniquement pour répondre à votre message et ne sont pas stockées dans une base de données.
               </p>
 
               <h2 className="text-2xl font-display font-semibold mb-6">

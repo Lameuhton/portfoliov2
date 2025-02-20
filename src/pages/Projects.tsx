@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { fadeInVariants } from "../lib/utils";
 import { ExternalLink, Github, Filter } from "lucide-react";
 import { useState } from "react";
+import { SEOHead } from "../components/SEOHead";
 
 const projects = [
   {
@@ -91,134 +92,140 @@ export function Projects() {
   };
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="pt-36 pb-20 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            className="max-w-4xl mx-auto text-center"
-          >
-            <motion.h1
-              variants={fadeInVariants()}
-              className="text-4xl md:text-5xl font-display font-bold mb-6"
+    <>
+      <SEOHead
+        title="Projets"
+        description="Politique de confidentialité détaillant la gestion et la protection de vos données personnelles sur le site d'Auréliane Gagliardi."
+      />
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="pt-36 pb-20 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="max-w-4xl mx-auto text-center"
             >
-              Mes Réalisations
-            </motion.h1>
-            <motion.p
-              variants={fadeInVariants(0.2)}
-              className="text-xl text-gray-600 dark:text-gray-300"
-            >
-              Un aperçu des projets que j'ai réalisés pour mettre en
-              pratique mes compétences en développement web.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+              <motion.h1
+                variants={fadeInVariants()}
+                className="text-4xl md:text-5xl font-display font-bold mb-6"
+              >
+                Mes Réalisations
+              </motion.h1>
+              <motion.p
+                variants={fadeInVariants(0.2)}
+                className="text-xl text-gray-600 dark:text-gray-300"
+              >
+                Un aperçu des projets que j'ai réalisés pour mettre en pratique
+                mes compétences en développement web.
+              </motion.p>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Filters Section */}
-      <section className="pt-20 pb-36 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            className="max-w-6xl mx-auto"
-          >
-            <div className="flex flex-wrap gap-4 mb-12">
-              <div className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-rose-600 dark:text-rose-400" />
-                <span className="font-semibold">Technologies :</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => setSelectedTech([])}
-                  className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                    selectedTech.length === 0
-                      ? "bg-rose-600 text-white"
-                      : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-                  }`}
-                >
-                  Tous
-                </button>
-                {technologies.map((tech) => (
+        {/* Filters Section */}
+        <section className="pt-20 pb-36 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="max-w-6xl mx-auto"
+            >
+              <div className="flex flex-wrap gap-4 mb-12">
+                <div className="flex items-center gap-2">
+                  <Filter className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+                  <span className="font-semibold">Technologies :</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   <button
-                    key={tech}
-                    onClick={() => toggleTech(tech)}
+                    onClick={() => setSelectedTech([])}
                     className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                      selectedTech.includes(tech)
+                      selectedTech.length === 0
                         ? "bg-rose-600 text-white"
                         : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                     }`}
                   >
-                    {tech}
+                    Tous
                   </button>
+                  {technologies.map((tech) => (
+                    <button
+                      key={tech}
+                      onClick={() => toggleTech(tech)}
+                      className={`px-4 py-2 rounded-full text-sm transition-colors ${
+                        selectedTech.includes(tech)
+                          ? "bg-rose-600 text-white"
+                          : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      }`}
+                    >
+                      {tech}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, index) => (
+                  <motion.article
+                    key={project.title}
+                    variants={fadeInVariants(index * 0.1)}
+                    className="rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 text-sm bg-rose-100 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex gap-4">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400"
+                          >
+                            <Github className="w-4 h-4" />
+                            Code
+                          </a>
+                        )}
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            Demo
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </motion.article>
                 ))}
               </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project, index) => (
-                <motion.article
-                  key={project.title}
-                  variants={fadeInVariants(index * 0.1)}
-                  className="rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 text-sm bg-rose-100 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-4">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400"
-                        >
-                          <Github className="w-4 h-4" />
-                          Code
-                        </a>
-                      )}
-                      {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Demo
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

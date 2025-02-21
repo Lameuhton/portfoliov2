@@ -56,8 +56,8 @@ export function WhyChooseMe() {
               Pourquoi Me Choisir ?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Je m'engage à créer non seulement un site web magnifique, mais aussi une expérience 
-              exceptionnelle pour vous et vos utilisateurs.
+              J'aime donner vie aux designs en créant des interfaces intuitives
+              et réactives.
             </p>
           </motion.div>
 

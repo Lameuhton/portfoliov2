@@ -7,9 +7,18 @@ import { useState } from "react";
 export function Contact() {
   const [showSuccess, setShowSuccess] = useState(false);
 
+  const sanitizeInput = (text) => {
+    return text.replace(/[<>]/g, ""); // Supprime les balises HTML
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
+
+    // Filtrage des données
+    formData.set("email", sanitizeInput(formData.get("email")));
+    formData.set("subject", sanitizeInput(formData.get("subject")));
+    formData.set("message", sanitizeInput(formData.get("message")));
 
     const response = await fetch("https://formspree.io/f/xqaenokn", {
       method: "POST",
@@ -172,6 +181,9 @@ export function Contact() {
                     placeholder="Votre message..."
                   ></textarea>
                 </div>
+
+                {/* Ajout du Honeypot (champ caché pour éviter les spams) */}
+                <input type="text" name="_gotcha" style={{ display: "none" }} />
 
                 <button
                   type="submit"

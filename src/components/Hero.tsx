@@ -26,7 +26,7 @@ export function Hero() {
               Bonjour, je suis
             </motion.p>
             <TypingText
-              texts={["Auréliane Gagliardi", "Développeuse Web Junior"]}
+              texts={["Auréliane Gagliardi", "Développeuse Front-end"]}
               className="font-display text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300 text-transparent bg-clip-text"
             />
           </motion.h1>

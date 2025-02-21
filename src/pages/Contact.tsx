@@ -1,25 +1,37 @@
-import { motion } from 'framer-motion';
-import { fadeInVariants } from '../lib/utils';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import { SEOHead } from '../components/SEOHead';
-import { useForm } from "@formspree/react";
+import { motion } from "framer-motion";
+import { fadeInVariants } from "../lib/utils";
+import { Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
+import { SEOHead } from "../components/SEOHead";
+import { useState } from "react";
 
 export function Contact() {
-  const [state, handleSubmit] = useForm("xoqgzwoa");
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  if (state.succeeded) {
-    alert("Message submitted!");
-    window.location.reload();
-    window.scrollTo(0, 0);
-  }
-  
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    const response = await fetch("https://formspree.io/f/xqaenokn", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      setShowSuccess(true);
+      event.target.reset();
+      setTimeout(() => setShowSuccess(false), 5000);
+    } else {
+      alert("Une erreur est survenue, veuillez réessayer.");
+    }
+  };
+
   return (
     <>
       <SEOHead
         title="Contact"
         description="Développeuse web en recherche d'opportunités, contactez-moi pour en savoir plus sur mon profil et mes compétences."
       />
-      {/* Hero Section */}
       <section className="pt-36 pb-20 bg-gradient-to-b from-rose-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
@@ -45,7 +57,6 @@ export function Contact() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="pt-20 pb-36 bg-white dark:bg-gray-900" id="contact">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -61,10 +72,9 @@ export function Contact() {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-8">
                   Vous pouvez me contacter via ce formulaire ou par email pour
-                  toute proposition ou collaboration. Je m'engage à vous répondre
-                  rapidement !
+                  toute proposition ou collaboration. Je m'engage à vous
+                  répondre rapidement !
                 </p>
-
                 <div className="space-y-6">
                   {[
                     {
@@ -108,7 +118,7 @@ export function Contact() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInVariants(0.2)}
-                className="space-y-6"
+                className="space-y-6 relative"
                 onSubmit={handleSubmit}
                 method="POST"
               >
@@ -123,6 +133,7 @@ export function Contact() {
                     type="email"
                     id="email"
                     name="email"
+                    required
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-rose-500 outline-none transition-shadow"
                     placeholder="votre@email.com"
                   />
@@ -139,6 +150,7 @@ export function Contact() {
                     type="text"
                     id="subject"
                     name="subject"
+                    required
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-rose-500 outline-none transition-shadow"
                     placeholder="Le sujet de votre message"
                   />
@@ -155,6 +167,7 @@ export function Contact() {
                     id="message"
                     name="message"
                     rows={6}
+                    required
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-rose-500 outline-none transition-shadow resize-none"
                     placeholder="Votre message..."
                   ></textarea>
@@ -167,6 +180,13 @@ export function Contact() {
                   <Send className="w-5 h-5" />
                   Envoyer le message
                 </button>
+
+                {showSuccess && (
+                  <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-xl flex items-center gap-2 shadow-md">
+                    <CheckCircle className="w-5 h-5" />
+                    Message envoyé avec succès !
+                  </div>
+                )}
               </motion.form>
             </div>
           </div>

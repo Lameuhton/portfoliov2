@@ -168,7 +168,7 @@ export function Navigation() {
                       className="mt-8 pt-8 border-t border-primary-100 dark:border-primary-800"
                     >
                       <a
-                        href="/CV.pdf"
+                        href="/CV-aureliane-gagliardi-webdev.pdf"
                         download
                         className="flex items-center justify-center gap-4 w-full p-4 bg-primary-600 dark:bg-primary-500 text-white rounded-2xl hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors"
                       >

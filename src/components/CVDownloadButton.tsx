@@ -9,7 +9,7 @@ interface CVDownloadButtonProps {
 export function CVDownloadButton({ className = '', variant = 'primary' }: CVDownloadButtonProps) {
   return (
     <motion.a
-      href="/CV.pdf"
+      href="/CV-aureliane-gagliardi-webdev.pdf"
       download
       className={`
         inline-flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300

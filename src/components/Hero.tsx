@@ -52,7 +52,7 @@ export function Hero() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="/CV.pdf"
+              href="/CV-aureliane-gagliardi-webdev.pdf"
               download
               className="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary-200 dark:border-primary-800 rounded-full hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
             >

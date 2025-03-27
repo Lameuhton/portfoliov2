@@ -15,15 +15,6 @@ const projects = [
     demo: "https://www.docteur.webecode.be/",
   },
   {
-    title: "Site de la Sandwicherie Deliziosa",
-    description:
-      "Projet réalisé entièrement par moi-même pour une connaissance, ce site vitrine présente de manière attrayante les services et produits de la sandwicherie.",
-    image: "/images/projet-sandwicherie.png",
-    tech: ["NextJS", "Tailwind"],
-    github: null,
-    demo: null,
-  },
-  {
     title: "BubblePop Game",
     description:
       "BubblePop Game est un mini-jeu React où tu as 60 secondes pour éclater un max de bulles et faire le meilleur score. Un projet personnel réalisé juste pour le fun.",

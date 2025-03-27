@@ -24,6 +24,15 @@ const projects = [
     demo: null,
   },
   {
+    title: "BubblePop Game",
+    description:
+      "BubblePop Game est un mini-jeu React où tu as 60 secondes pour éclater un max de bulles et faire le meilleur score. Un projet personnel réalisé juste pour le fun.",
+    image: "/images/projet-bubblepop.png",
+    tech: ["React"],
+    github: "https://github.com/Lameuhton/BubblePop-Game",
+    demo: "https://bubble-pop-game-three.vercel.app/",
+  },
+  {
     title: "Portfolio",
     description:
       "Ce portfolio est un site moderne et responsive conçu pour présenter des compétences professionnelles avec un design élégant et des animations subtiles.",

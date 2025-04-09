@@ -24,6 +24,15 @@ const projects = [
     demo: "https://bubble-pop-game-three.vercel.app/",
   },
   {
+    title: "DevFlow",
+    description:
+      "DevFlow est un tableau de bord moderne pour développeurs qui regroupe des outils utiles dans une interface élégante. Conçu comme un terrain de jeu pour tester des idées.",
+    image: "/images/projet-devflow.png",
+    tech: ["React", "Typescript", "Tailwind"],
+    github: "https://github.com/Lameuhton/DevFlow",
+    demo: "https://dev-flow-lac-delta.vercel.app/",
+  },
+  {
     title: "Portfolio",
     description:
       "Ce portfolio est un site moderne et responsive conçu pour présenter des compétences professionnelles avec un design élégant et des animations subtiles.",
